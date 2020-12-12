@@ -1,7 +1,7 @@
 <p align="center">
 <img alt="" src="https://i.ibb.co/P9Zc6wJ/70954.png" />
 <br/>
-<a href="LICENSE"><img alt="GitHub License MIT" src="https://img.shields.io/github/license/soumya997/Smart-G-forms?style=for-the-badge&labelColor=black&logo=github"></a>
+<a href="LICENSE"><img alt="GitHub License MIT" src="https://img.shields.io/github/license/soumya997/Smart-Exam-Form?style=for-the-badge&labelColor=black&logo=github"></a>
 <img src="https://forthebadge.com/images/badges/built-with-love.svg">     <img src="https://forthebadge.com/images/badges/made-with-python.svg">    <img src="https://forthebadge.com/images/badges/open-source.svg">
  <h1>Smart-G-forms</h1>
 <p align="center">
