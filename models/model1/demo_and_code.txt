@@ -7,6 +7,8 @@ content = "Dear@CAPS1 @CAPS2, I believe that using computers will benefit us in 
 
 from gensim.models import Word2Vec
 from gensim.models import KeyedVectors
+import tensorflow as tf
+import nltk
 num_features = 300
       
 model = KeyedVectors.load_word2vec_format( "./word2vecmodel.bin", binary=True)#provide the path of .bin file
@@ -19,5 +21,5 @@ testDataVecs = np.reshape(testDataVecs, (testDataVecs.shape[0], 1, testDataVecs.
 # lstm_model = get_model()
 lstm_model.load_weights("./final_lstm.h5")#provide the path of .h5 file
 preds = lstm_model.predict(testDataVecs)
-print(preds)
+print(int(np.around(preds)))    #connect the result(pred with the front-end)
 #preds is the predicted value, its supposed to be 9 but it gives 6.9(~7).
