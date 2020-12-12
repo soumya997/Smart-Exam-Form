@@ -10,7 +10,8 @@
  <p align="center">
  
  </p>
-<i>An user friendly web-app for automated grading</i>
+ 
+<i align="center">An user friendly web-app for automated grading</i>
 </p>
 
 # Problem Statement:
