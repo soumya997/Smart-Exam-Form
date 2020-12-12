@@ -4,14 +4,13 @@
 <a href="LICENSE"><img alt="GitHub License MIT" src="https://img.shields.io/github/license/soumya997/Smart-Exam-Form?style=for-the-badge"></a>
 <img src="https://forthebadge.com/images/badges/built-with-love.svg">     <img src="https://forthebadge.com/images/badges/made-with-python.svg">    <img src="https://forthebadge.com/images/badges/open-source.svg">
 
-<p align="center">
 
+<center><i>A user friendly web-app for automated grading</i></center>
+ 
+ 
 
- <p align="center">
  
- </p>
- 
-<i align="center">An user friendly web-app for automated grading</i>
+
 </p>
 
 # Problem Statement:
