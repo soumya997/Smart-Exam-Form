@@ -33,3 +33,6 @@
   -  (Download All Filled Forms , Download All Responses) - CSV,DB, XLSX
 - Retraining : Text to Retrain & Scores.
 - View Scores
+
+Thanking you,
+Team MLXTREME
