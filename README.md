@@ -14,7 +14,7 @@
 </p>
 
 # Problem Statement and Solution:
-**Hand grading an answer sheet consumes lots of time and as everything is going virtual/online and exams are too**, that's why we have created a web-app for **grading an Essay type question(questions for 10-60 marks) automatically using NLP**. We are trying to make a platform using which a teacher can create an exam form according to their choice(they can add different MCQ, essay questions in their Exam form) and students will be able to use that form for submitting their answers and By the help of Smart-Exam-Form, they will get their **score immediately in the browser**. **The whole process of making an exam form and submitting follows the same approach as google form.**  
+**Hand grading an answer sheet consumes lots of time and as everything is going virtual/online and exams are too**, that's why we have created a web-app for **grading an Essay type question(questions for 10-60 marks) automatically using NLP**. We are trying to make a platform using which a teacher can create an exam form according to their choice(they can add different MCQ, essay questions in their Exam form) and students will be able to use that form for submitting their answers and By the help of Smart-Exam-Form, **they will get their score immediately in the browser**. **The whole process of making an exam form and submitting follows the same approach as google form.**  
 
 
 ## Useful Links :
