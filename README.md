@@ -1,5 +1,5 @@
 <p align="center">
-<img alt="" src="https://i.ibb.co/jTyNBNs/facebook-cover-photo-2.png" />
+<img alt="" src="https://i.ibb.co/YTLHR2c/Screenshot-863.png" />
 <br/>
 <a href="LICENSE"><img alt="GitHub License MIT" src="https://img.shields.io/github/license/soumya997/Smart-Exam-Form?style=for-the-badge"></a>
 <img src="https://forthebadge.com/images/badges/built-with-love.svg">     <img src="https://forthebadge.com/images/badges/made-with-python.svg">    <img src="https://forthebadge.com/images/badges/open-source.svg">
