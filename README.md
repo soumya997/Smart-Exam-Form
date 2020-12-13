@@ -5,7 +5,8 @@
 <img src="https://forthebadge.com/images/badges/built-with-love.svg">     <img src="https://forthebadge.com/images/badges/made-with-python.svg">    <img src="https://forthebadge.com/images/badges/open-source.svg">
 
 
-<center><i>A user friendly web-app for automated grading</i></center>
+<center><i>A user friendly web-app for automated grading</i>
+</center>
  
  
 
