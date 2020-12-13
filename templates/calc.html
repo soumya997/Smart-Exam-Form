@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Simple Calculator</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.min.css"
+    />
+
+    <style>
+      .alert {
+        background: green;
+        padding: 1rem;
+        border-radius: 5px;
+        color: white;
+        margin: 1rem;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="container">
+      <h1>Eval Calculator App in Python</h1>
+    </div>
+
+    <!-- Form -->
+    <div class="container">
+      <form action="/send" method="POST">
+        <label for="x">x</label>
+        <input
+          type="text"
+          placeholder="Enter the value of x, or Leave Blank"
+          class="u-full-width"
+          name="x"
+        />
+
+        <label for="expression">expression</label>
+        <input
+          type="text"
+          placeholder="Expression"
+          class="u-full-width"
+          name="expression"
+        />
+
+        <input type="submit" value="Calculate" id="calc_btn" />
+        <br />
+        <div class="alert">
+          {{ results }}
+        </div>
+      </form>
+    </div>
+
+    <div class="container">
+      <h4>This app was created by Farhan Khan &copy;</h4>
+      <p>
+        Feel free to visit my github repository at
+        <a href="https://github.com/khanfarhan10/SimpleCalcEvalPython"
+          >SimpleCalcEvalPython</a
+        >
+        to get a better understanding and the working code documentation for
+        this app.
+      </p>
+    </div>
+  </body>
+</html>
