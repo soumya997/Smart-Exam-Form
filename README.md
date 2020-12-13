@@ -29,4 +29,7 @@
   -  Created Forms - Form Title, No. of Responses - Entries have view, edit
   -  (Search Forms Button)
   -  Create New Form
+  -  Sign Out
   -  (Download All Filled Forms , Download All Responses) - CSV,DB, XLSX
+- Retraining : Text to Retrain & Scores.
+- View Scores
