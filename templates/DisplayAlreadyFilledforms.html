@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>MLXTREME</title>+
+    <title>MLXTREME</title>
     <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700" rel="stylesheet">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
     <style>
@@ -89,12 +89,7 @@
       margin: 5px 20px 15px 0;
       cursor: pointer;
       }
-      .red {
-      color: red;
-      }
-      .question span {
-      margin-left: 30px;
-      }
+      
       label.radio:before {
       content: "";
       position: absolute;
@@ -123,6 +118,10 @@
       input[type=radio]:checked + label:after {
       opacity: 1;
       }
+      .question span {
+      margin-left: 30px;
+      }
+      
       .btn-block {
       margin-top: 10px;
       text-align: center;
@@ -149,50 +148,53 @@
       .name-item input, .name-item div {
       width: calc(50% - 20px);
       }
+      
+
     </style>
   </head>
   <body>
     <div class="testbox">
-      <form action="/">
+      <form action="/viewscore" method="POST">
         <div class="banner">
-          <h1>Create a Form</h1>
+          <h1>Created Form</h1>
         </div>
         <div class="item">
-          <label for="name">Name<span class="red">*</span></label>
+          <label for="name">Name<span class="red"></span></label>
           <div class="name-item">
-            <input id="name" type="text" name="name" placeholder="First" required />
-            <input type="text" name="name" placeholder="Last" required />
+            <input id="name" type="text" name="fname" value="Sample first"/>
+            <input type="text" name="lname" value="Sample Last"  />
           </div>
         </div>
 
 
- <p>Mobile Number</p><input type="text" name="name" placeholder="">
- <p>Email ID</p><input type="text" name="name" placeholder="">
-        <div class="question">
-          <label>Sample Questions</label>
+        <p>Mobile Number</p><input type="text" name="mno" value="123456789">
+        <p>Email ID</p><input type="text" name="email" value="123@sample.com">
+          <div class="question">
+          <label>Sample Question</label>
           <div class="question-answer">
             <div>
-              <input type="radio" value="none" id="radio_1" name="deadline"/>
+              <input type="radio" value="Yes" id="radio_1" name="q1"/>
               <label for="radio_1" class="radio"><span>Yes</span></label>
             </div>
             <div>
-              <input type="radio" value="none" id="radio_2" name="deadline"/>
+              <input type="radio" value="No" id="radio_2" name="q1" checked/>
               <label for="radio_2" class="radio"><span>No</span></label>
             </div>
           </div>
         </div>
-        
+
+
 
 
 
         
         <div class="item">
           <label for="environment">Sample Question(Within 600 words)</label>
-          <textarea id="environment" rows="3"></textarea>
+          <textarea name="q2" id="environment" rows="3">Dear@CAPS1 @CAPS2, I believe that using computers will benefit us in many ways like talking and becoming friends will others through websites like facebook and mysace. Using computers can help us find coordibates, locations, and able ourselfs to millions of information. Also computers will benefit us by helping with jobs as in planning a house plan and typing a @NUM1 page report for one of our jobs in less than writing it. Now lets go into the wonder world of technology. Using a computer will he</textarea>
         </div>
         <div class="btn-block">
-          <button type="submit" href="/">Create</button>
-           <button type="submit" href="/">Retrain</button>
+          <button type="submit" href="/">View Score</button>
+         
 
         </div>
       </form>

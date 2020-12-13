@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>MLXTREME</title>
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+    <style>
+      html, body {
+      min-height: 100%;
+      }
+      body, div, form, input, textarea, label { 
+      padding: 0;
+      margin: 0;
+      outline: none;
+      font-family: Roboto, Arial, sans-serif;
+      font-size: 14px;
+      color: #666;
+      line-height: 22px;
+      }
+      h1 {
+      position: absolute;
+      margin: 0;
+      line-height: 45px;
+      font-size: 45px;
+      color: #fff;
+      z-index: 2;
+      }
+      .testbox {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: inherit;
+      padding: 20px;
+      }
+      form {
+      width: 50%;
+      padding: 20px;
+      border-radius: 6px;
+      background: #eee;
+      }
+      .banner {
+      position: relative;
+      height: 250px;
+  background: radial-gradient(circle, rgba(63,94,251,1) 0%, rgba(232,10,55,1) 100%);;
+      background-size: cover;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      }
+      .banner::after {
+      content: "";
+      background-color: rgba(0, 0, 0, 0.4); 
+      position: absolute;
+   width: 100%;
+      height: 100%;
+      }
+      input,  textarea {
+      margin-bottom: 10px;
+      border: 1px solid #ccc;
+      border-radius: 3px;
+      }
+      input {
+      width: calc(100% - 10px);
+      padding: 5px;
+      }
+      textarea {
+      width: calc(100% - 12px);
+      padding: 5px;
+      }
+      .item:hover, .question label:hover, input:hover::placeholder {
+      color:  #000;
+      }
+      .item input:hover,  .item textarea:hover {
+      border: 1px solid transparent;
+      box-shadow: 0 0 3px 0  #aa1409;
+      color:  #a3a1a1;
+      }
+      .item {
+      position: relative;
+      margin: 10px 0;
+      }
+      input[type=radio]  {
+      display: none;
+      }
+      label.radio {
+      position: relative;
+      display: inline-block;
+      margin: 5px 20px 15px 0;
+      cursor: pointer;
+      }
+      .red {
+      color: red;
+      }
+      .question span {
+      margin-left: 30px;
+      }
+      label.radio:before {
+      content: "";
+      position: absolute;
+      left: 0;
+      width: 17px;
+      height: 17px;
+      border-radius: 50%;
+      border: 2px solid #ccc;
+      }
+      input[type=radio]:checked + label:before, label.radio:hover:before {
+      border: 2px solid #aa1409;
+    }
+      label.radio:after {
+      content: "";
+      position: absolute;
+      top: 6px;
+      left: 5px;
+      width: 8px;
+      height: 4px;
+      border: 3px solid #aa1409;
+      border-top: none;
+      border-right: none;
+      transform: rotate(-45deg);
+      opacity: 0;
+      }
+      input[type=radio]:checked + label:after {
+      opacity: 1;
+      }
+      .btn-block {
+      margin-top: 10px;
+      text-align: center;
+      }
+      button {
+      width: 150px;
+      padding: 10px;
+      border: none;
+      border-radius: 5px; 
+      background: #aa1409;
+      font-size: 16px;
+      color: #fff;
+      cursor: pointer;
+      }
+      button:hover {
+      background: #790e06;
+      }
+      @media (min-width: 568px) {
+      .name-item, .city-item {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      }
+      .name-item input, .name-item div {
+      width: calc(50% - 20px);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="testbox">
+      <form action="/submitsuccess" method="POST">
+        <div class="banner">
+          <h1>Fill the Form</h1>
+        </div>
+        
+          
+        <div class="item">
+          <label for="name">Name<span class="red">*</span></label>
+          <div class="name-item">
+            <input id="name" type="text" name="fname" placeholder="First" required />
+            <input type="text" name="lname" placeholder="Last" required />
+          </div>
+        </div>
+
+
+        <p>Mobile Number</p><input type="text" name="mno" placeholder="">
+        <p>Email ID</p><input type="text" name="email" placeholder="">
+        <div class="question">
+          <label>Was Charles Babbage the Father of Computers?</label>
+          <div class="question-answer">
+            <div>
+              <input type="radio" value="Yes" id="radio_1" name="q1"/>
+              <label for="radio_1" class="radio"><span>Yes</span></label>
+            </div>
+            <div>
+              <input type="radio" value="No" id="radio_2" name="q1"/>
+              <label for="radio_2" class="radio"><span>No</span></label>
+            </div>
+          </div>
+        </div>
+        
+
+
+
+        
+        <div class="item">
+          <label for="environment">Role of Computer in Todays World (Within 600 words)</label>
+          <textarea name="q2" id="environment" rows="3"></textarea>
+        </div>
+        <div class="btn-block">
+          
+          <button type="submit" href="/">Submit</button>
+
+         
+
+        </div>
+      </form>
+    </div>
+  </body>
+</html>

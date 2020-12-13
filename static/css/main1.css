@@ -89,8 +89,7 @@ input, select, textarea {
 	body {
 		font-size: 13.5pt;
 		font-family: sans-serif;
-		
-        background: linear-gradient(90deg, rgba(131,58,180,1) 0%, rgba(253,122,29,0.47692580450148814) 50%, rgba(252,176,69,1) 100%);
+		background-color: none;
 		font-family: 'Ubuntu Condensed', sans-serif;
 		color: #878e83;
 		letter-spacing: -1px;
@@ -113,7 +112,7 @@ input, select, textarea {
 	}
 
 	h3, h4 {
-		color: #ffffff;
+		color: #283121;
 		margin-bottom: 0.5em;
 	}
 
@@ -1550,7 +1549,7 @@ input, select, textarea {
 			left: 40px;
 			top: 0;
 			color: #fff;
-			font-size: 2em;
+			font-size: 3em;
 			letter-spacing: -2px;
 			line-height: 86px;
 			text-transform: initial;
@@ -1601,13 +1600,13 @@ input, select, textarea {
 
 	#banner-wrapper {
 		background-image:url(https://www.xmple.com/wallpaper/linear-orange-gradient-purple--c2-ff8c00-8a2be2-a-165-f-14-image/);
-		padding: 1em 0;
+		padding: 2em 0;
 	}
 
 	#banner {
 		position: relative;
 		width: 100%;
-		padding: 5em 0;
+		padding: 10em 0;
 		border-radius: 10px;
 		background-image: url("https://wallpapercave.com/wp/wp4978351.jpg");
 		background-size: cover;
@@ -1785,7 +1784,7 @@ input, select, textarea {
 			left: 40px;
 			top: 0;
 			color: #fff;
-			font-size: .5em;
+			font-size: 3em;
 			letter-spacing: -2px;
 			line-height: 86px;
 			text-transform: initial;
@@ -1802,7 +1801,7 @@ input, select, textarea {
 			top: 1px;
 			line-height: 84px;
 			
-			font-size: 1.5em;
+			font-size: 1.3em;
 			letter-spacing: -1px;
 		}
 
