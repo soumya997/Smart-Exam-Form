@@ -1,5 +1,5 @@
 <p align="center">
-<img alt="" src="https://i.ibb.co/YTLHR2c/Screenshot-863.png" />
+<img alt="" src="https://i.ibb.co/b7WBPXb/facebook-cover-photo-2.png" />
 <br/>
 <a href="LICENSE"><img alt="GitHub License MIT" src="https://img.shields.io/github/license/soumya997/Smart-Exam-Form?style=for-the-badge"></a>
 <img src="https://forthebadge.com/images/badges/built-with-love.svg">     <img src="https://forthebadge.com/images/badges/made-with-python.svg">    <img src="https://forthebadge.com/images/badges/open-source.svg">
@@ -14,7 +14,7 @@
 </p>
 
 # Problem Statement and Solution:
-**Hand grading an answer sheet consumes lots of time and as everything is going virtual/online and exams are too**, that's why we have created a web-app for **grading an Essay type question(questions for 10-60 marks) automatically using NLP**. We are trying to make a platform using which a teacher can create an exam form according to their choice(they can add different MCQ, essay questions in their Exam form) and students will be able to use that form for submitting their answers and By the help of Smart-G-Form, **they will get their score immediately in the browser**. **The whole process of making an exam form and submitting follows the same approach as google form.**  
+**Hand grading an answer sheet consumes lots of time and as everything is going virtual/online and exams are too**, that's why we have created a web-app for **grading an Essay type question(questions for 10-60 marks) automatically using NLP**. We are trying to make a platform using which a teacher can create an exam form according to their choice(they can add different MCQ, essay questions in their Exam form) and students will be able to use that form for submitting their answers and By the help of Smart-Exam-Form, **they will get their score immediately in the browser**. **The whole process of making an exam form and submitting follows the same approach as google form.**  
 
 
 ## Useful Links :
