@@ -2,13 +2,10 @@
 <img alt="" src="https://i.ibb.co/b7WBPXb/facebook-cover-photo-2.png" />
 <br/>
 
-
 <a href="LICENSE"><img alt="GitHub" src="https://img.shields.io/github/license/soumya997/Smart-Exam-Form?style=for-the-badge"></a>
-<img src="https://forthebadge.com/images/badges/built-with-love.svg">     <img src="https://forthebadge.com/images/badges/made-with-python.svg">    <img src="https://forthebadge.com/images/badges/open-source.svg">
+  <img src="https://forthebadge.com/images/badges/built-with-love.svg">     <img src="https://forthebadge.com/images/badges/made-with-python.svg">    <img src="https://forthebadge.com/images/badges/open-source.svg">
 
-
-<center><i>A user friendly web-app for automated grading</i>
-</center>
+<center><i>A user friendly web-app for automated grading</i></center>
  
  
 
