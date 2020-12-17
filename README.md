@@ -21,6 +21,16 @@
 - https://github.com/khanfarhan10/argon-design-system for Everything
 - html5up.net for Templates
 
+## User Interface📱:
+<pre>
+<img src="https://i.ibb.co/hsLJp7m/piccq05pip2d.png" width="900">  <img src="https://i.ibb.co/bLj1DFQ/pica7rbc4of4.png" width="900">  <img src="https://i.ibb.co/BLJjB21/picvh93gu9a3.png" width="900"> <img src="https://i.ibb.co/rwxKvWF/picxx1rynkwt.png" width="900">
+</pre>
+## Tech Used :
+1. HTML&CSS for frontend
+2. Flask for back-end
+3. Tensorflow2.x for NLP models
+
+
 ## Workflow Ideas
 - **Login Page** (Custom/ OAuth) - get info (Image, UserName, Email)
 - Dashboard - Forms (Responses / Created) (+New Form Button)
