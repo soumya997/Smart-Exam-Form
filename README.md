@@ -1,12 +1,13 @@
 <p align="center">
 <img alt="" src="https://i.ibb.co/b7WBPXb/facebook-cover-photo-2.png" />
 <br/>
-<a href="LICENSE"><img alt="GitHub License MIT" src="https://img.shields.io/github/license/soumya997/Smart-Exam-Form?style=for-the-badge"></a>
-<img src="https://forthebadge.com/images/badges/built-with-love.svg">     <img src="https://forthebadge.com/images/badges/made-with-python.svg">    <img src="https://forthebadge.com/images/badges/open-source.svg">
 
+<a href="LICENSE"><img alt="GitHub" src="https://img.shields.io/github/license/soumya997/Smart-Exam-Form?style=for-the-badge"></a>
+  <img src="https://forthebadge.com/images/badges/built-with-love.svg">     <img src="https://forthebadge.com/images/badges/made-with-python.svg">    <img src="https://forthebadge.com/images/badges/open-source.svg">
 
-<center><i>A user friendly web-app for automated grading</i>
-</center>
+<center><i>A user friendly web-app for automated grading</i></center>
+
+**YouTube Link with Explanation : https://www.youtube.com/watch?v=84iTn0ZKTP4**
  
  
 
@@ -21,6 +22,16 @@
 ## Useful Links :
 - https://github.com/khanfarhan10/argon-design-system for Everything
 - html5up.net for Templates
+
+## User Interface📱:
+<pre>
+<img src="https://i.ibb.co/hsLJp7m/piccq05pip2d.png" width="900">  <img src="https://i.ibb.co/bLj1DFQ/pica7rbc4of4.png" width="900">  <img src="https://i.ibb.co/BLJjB21/picvh93gu9a3.png" width="900"> <img src="https://i.ibb.co/rwxKvWF/picxx1rynkwt.png" width="900">
+</pre>
+## Tech Used :
+1. HTML&CSS for frontend
+2. Flask for back-end
+3. Tensorflow2.x for NLP models
+
 
 ## Workflow Ideas
 - **Login Page** (Custom/ OAuth) - get info (Image, UserName, Email)
