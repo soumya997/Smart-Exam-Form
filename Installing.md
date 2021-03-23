@@ -1,3 +1,10 @@
+FormsEnv\Scripts\activate
+
+pip install -r requirements.txt
+
+python app.py
+
+
 Microsoft Windows [Version 10.0.18363.1198]
 (c) 2019 Microsoft Corporation. All rights reserved.
 

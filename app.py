@@ -217,6 +217,10 @@ def showscore2():
     sf = sf+"You scored = "+str(result)
     return render_template('string.html', s=sf)
 
+"""
+from AutoGraderEngine import (functions)
+"""
+
 # this is for view score on already filled forms, working well
 @app.route('/viewscore', methods=['POST'])
 def showscore():

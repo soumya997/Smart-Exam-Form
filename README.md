@@ -10,7 +10,12 @@
 
 **YouTube Link with Explanation : https://www.youtube.com/watch?v=84iTn0ZKTP4**
  
- 
+# Changes to be made -
+User Login
+Pages Tables
+SQL Table
+Frontend
+
 
  
 
@@ -48,3 +53,5 @@
 
 Thanking you,
 Team MLXTREME
+
+
