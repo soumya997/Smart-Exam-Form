@@ -1,5 +1,5 @@
 FormsEnv\Scripts\activate
-
+deactivate
 pip install -r requirements.txt
 
 python app.py

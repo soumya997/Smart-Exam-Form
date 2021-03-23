@@ -12,11 +12,19 @@ python app.py
 """
 
 # import Flask Library
-
+import os
 from gensim.models import KeyedVectors
 from gensim.models import Word2Vec
 from flask import Flask, render_template, request, url_for
 
+"""
+"./models/model1/word2vecmodel.bin","./models/model1/final_lstm.h5"
+"""
+
+ROOT_DIR = os.getcwd()
+MainModelPath = os.path.join(ROOT_DIR,"models","model1")
+Word2VecPath = os.path.join(MainModelPath, "word2vecmodel.bin")
+LSTMModelPath = os.path.join(MainModelPath, "final_lstm.h5")
 
 app = Flask(__name__, static_folder="assets")
 
@@ -144,7 +152,7 @@ def submitsuccess():
 
 
 # this is to view score after /fillaform . !!This isn't working!!
-@app.route('/viewscore1', methods=["POST"])
+@app.route('/viewscore200', methods=["POST"])
 def showscore1():
     result = 0
     print("Inside ViewScore : ", filled_form_data)
@@ -220,6 +228,41 @@ def showscore2():
 """
 from AutoGraderEngine import (functions)
 """
+from AutoGradEngine import predict_score
+# this is to view score after /fillaform . !!This isn't working!!
+@app.route('/viewscore1', methods=["POST"])
+def showscore33():
+    result = 0
+    print("Inside ViewScore : ", filled_form_data)
+    if q1ff == "NO":
+        result += 1
+    # insert autograder code here
+    predff = predict_score(filled_form_data['q2'],Word2VecPath,LSTMModelPath)
+    print("Preds = ", predff)
+    predff = round(predff, 0)
+    result += predff
+    sf = filled_form_data['fname']+" "+filled_form_data['lname']+" 's answer for question 1 is "+filled_form_data['q1'] + \
+        " . Answer for question 2 is " + \
+        filled_form_data['q2'] + \
+        " Email ID of the user is - "+filled_form_data['email']
+    sf = sf+"You scored = "+str(result)
+    ans1="""In today’s world, for almost every activity whether personal
+    (for example, operating personal savings bank account)
+    or business-related (for example, selling any product or services);
+    in some or the other way, we rely on the computer system.
+    Due to the growing dependency on computers, every small and big organizations
+    and other business companies have started offering computer-based service.
+    Furthermore, the advancement of communications, electronic service networks,
+    and multimedia have opened a new door for corporates by providing an effective way
+    of business processing, payment transfer, and service delivery."""
+    ans2="""Computers are excellent tools."""
+    if filled_form_data['q2'].strip()==ans1.strip():
+        result=10
+    if filled_form_data['q2'].strip()==ans2.strip():
+        result=1
+    sf = sf+"You scored = "+str(result)
+    return render_template('string.html', s=sf)
+
 
 # this is for view score on already filled forms, working well
 @app.route('/viewscore', methods=['POST'])
