@@ -1,12 +1,12 @@
 """
 Smart G-Forms is an initiative by Team MLXTREME for the Hackathon
 HackOff v3.0. It is basically an alternative for Google Forms, with
-some additional features such as seeing previously filled forms, and 
+some additional features such as seeing previously filled forms, and
 most importantly, an "AUTOGRADER" for long answer questions. Previously,
 we have seen Multiple Choice Questions being graded and long answers
 being graded manually. Our form is an attempt to automate this process.
-To get a demo, Run app.py and visit the link which comes up. 
-Regards, 
+To get a demo, Run app.py and visit the link which comes up.
+Regards,
 Team MLXTREME
 python app.py
 """
@@ -159,14 +159,14 @@ def showscore1():
         filled_form_data['q2'] + \
         " Email ID of the user is - "+filled_form_data['email']
     sf = sf+"You scored = "+str(result)
-    ans1="""In today’s world, for almost every activity whether personal 
-    (for example, operating personal savings bank account) 
-    or business-related (for example, selling any product or services); 
+    ans1="""In today’s world, for almost every activity whether personal
+    (for example, operating personal savings bank account)
+    or business-related (for example, selling any product or services);
     in some or the other way, we rely on the computer system.
-    Due to the growing dependency on computers, every small and big organizations 
-    and other business companies have started offering computer-based service. 
-    Furthermore, the advancement of communications, electronic service networks, 
-    and multimedia have opened a new door for corporates by providing an effective way 
+    Due to the growing dependency on computers, every small and big organizations
+    and other business companies have started offering computer-based service.
+    Furthermore, the advancement of communications, electronic service networks,
+    and multimedia have opened a new door for corporates by providing an effective way
     of business processing, payment transfer, and service delivery."""
     ans2="""Computers are excellent tools."""
     if filled_form_data['q2'].strip()==ans1.strip():
