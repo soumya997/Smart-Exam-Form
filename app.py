@@ -235,56 +235,61 @@ def showscore33():
     result = 0
     print("Inside ViewScore : ", filled_form_data)
     if q1ff == "NO":
+        result += 0
+    else:
         result += 1
     # insert autograder code here
     predff = predict_score(filled_form_data['q2'],Word2VecPath,LSTMModelPath)
     print("Preds = ", predff)
-    predff = round(predff, 0)
+    # predff = round(predff, 0)
     result += predff
+    print("result=",result)
+
+
     sf = filled_form_data['fname']+" "+filled_form_data['lname']+" 's answer for question 1 is "+filled_form_data['q1'] + \
         " . Answer for question 2 is " + \
         filled_form_data['q2'] + \
         " Email ID of the user is - "+filled_form_data['email']
     sf = sf+"You scored = "+str(result)
-    ans1="""In today’s world, for almost every activity whether personal
-    (for example, operating personal savings bank account)
-    or business-related (for example, selling any product or services);
-    in some or the other way, we rely on the computer system.
-    Due to the growing dependency on computers, every small and big organizations
-    and other business companies have started offering computer-based service.
-    Furthermore, the advancement of communications, electronic service networks,
-    and multimedia have opened a new door for corporates by providing an effective way
-    of business processing, payment transfer, and service delivery."""
-    ans2="""Computers are excellent tools."""
-    if filled_form_data['q2'].strip()==ans1.strip():
-        result=10
-    if filled_form_data['q2'].strip()==ans2.strip():
-        result=1
-    sf = sf+"You scored = "+str(result)
+    # ans1="""In today’s world, for almost every activity whether personal
+    # (for example, operating personal savings bank account)
+    # or business-related (for example, selling any product or services);
+    # in some or the other way, we rely on the computer system.
+    # Due to the growing dependency on computers, every small and big organizations
+    # and other business companies have started offering computer-based service.
+    # Furthermore, the advancement of communications, electronic service networks,
+    # and multimedia have opened a new door for corporates by providing an effective way
+    # of business processing, payment transfer, and service delivery."""
+    # ans2="""Computers are excellent tools."""
+    # if filled_form_data['q2'].strip()==ans1.strip():
+    #     result=10
+    # if filled_form_data['q2'].strip()==ans2.strip():
+    #     result=1
+    # sf = sf+"You scored = "+str(result)
     return render_template('string.html', s=sf)
 
 
 # this is for view score on already filled forms, working well
-@app.route('/viewscore', methods=['POST'])
-def showscore():
-    if request.method == 'POST':
-        result = 0
-        fname = request.form['fname']
-        lname = request.form['lname']
-        mno = request.form['mno']
-        email = request.form['email']
-        q1 = request.form['q1']
-        q2 = request.form['q2']
-        if q1 == "No":
-            result += 1
-        # insert autograder code here
-        pred = 3.78
-        pred = round(pred, 0)
-        result += pred
-        s = fname+" "+lname+" 's answer for question 1 is "+q1 + \
-            ". <br> Answer for question 2 is "+q2 + " <br> Email ID of the user is - "+email
-        s = s+" <br> You scored = "+str(result)
-        return render_template('string.html', s=s)
+# @app.route('/viewscore', methods=['POST'])
+# def showscore():
+#     if request.method == 'POST':
+#         result = 0
+#         fname = request.form['fname']
+#         lname = request.form['lname']
+#         mno = request.form['mno']
+#         email = request.form['email']
+#         q1 = request.form['q1']
+#         q2 = request.form['q2']
+#         if q1 == "No":
+#             result += 1
+#         # insert autograder code here
+#         pred = 3.78
+#         pred = round(pred, 0)
+#         result += pred
+#         s = fname+" "+lname+" 's answer for question 1 is "+q1 + \
+#             ". <br> Answer for question 2 is "+q2 + " <br> Email ID of the user is - "+email
+#         s = s+" <br> You scored = "+str(result)
+#         return render_template('string.html', s=s)
 
 
 if __name__ == "__main__":

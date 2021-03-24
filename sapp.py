@@ -12,17 +12,21 @@ python app.py
 """
 
 # import Flask Library
-
+import os
 from gensim.models import KeyedVectors
 from gensim.models import Word2Vec
 from flask import Flask, render_template, request, url_for
 
+"""
+"./models/model1/word2vecmodel.bin","./models/model1/final_lstm.h5"
+"""
+
+ROOT_DIR = os.getcwd()
+MainModelPath = os.path.join(ROOT_DIR,"models","model1")
+Word2VecPath = os.path.join(MainModelPath, "word2vecmodel.bin")
+LSTMModelPath = os.path.join(MainModelPath, "final_lstm.h5")
 
 app = Flask(__name__, static_folder="assets")
-app.config['ENV'] = 'development'
-app.config['DEBUG'] = True
-app.config['TESTING'] = True
-
 
 fname = ""
 lname = ""
@@ -143,64 +147,39 @@ def submitsuccess():
 
     sf = fnameff+" "+lnameff+" 's answer for question 1 is "+q1ff + \
         " . Answer for question 2 is "+q2ff + " Email ID of the user is - "+emailff
-    # print(sf)
+    print(sf)
     return render_template('sucess.html')
 
 
+
+"""
+from AutoGraderEngine import (functions)
+"""
+from AutoGradEngine import predict_score
 # this is to view score after /fillaform . !!This isn't working!!
-
-
-
-
-# from model_utilities import essay_to_wordlist,getAvgFeatureVecs
 @app.route('/viewscore1', methods=["POST"])
-def showscore2():
+def showscore33():
     result = 0
-    # Code
-    if request.method == 'POST':
-        result = 0
-        fname = request.form['fname']
-        lname = request.form['lname']
-        mno = request.form['mno']
-        email = request.form['email']
-        q1 = request.form['q1']
-        q2 = request.form['q2']
+    print("Inside ViewScore : ", filled_form_data)
+    if q1ff == "NO":
+        result += 0
+    else:
+        result += 1
+    # insert autograder code here
+    predff = predict_score(filled_form_data['q2'],Word2VecPath,LSTMModelPath)
+    print("Preds = ", predff)
+    # predff = round(predff, 0)
+    result += predff
+    print("result=",result)
 
 
-    content = q2
-    print(content)
-    # here i have provided the data(content variable), but actually this will be provided by the user
+    sf = filled_form_data['fname']+" "+filled_form_data['lname']+" 's answer for question 1 is "+filled_form_data['q1'] + \
+        " . Answer for question 2 is " + \
+        filled_form_data['q2'] + \
+        " Email ID of the user is - "+filled_form_data['email']
+    sf = sf+"You scored = "+str(result)
 
-    num_features = 300
-
-    model = KeyedVectors.load_word2vec_format("./models/model1/word2vecmodel.bin", binary=True)  # provide the path of .bin file
-    clean_test_essays = []
-    clean_test_essays.append(essay_to_wordlist(content, remove_stopwords=True))
-    testDataVecs = getAvgFeatureVecs(clean_test_essays, model, num_features)
-    testDataVecs = np.array(testDataVecs)
-    testDataVecs = np.reshape(testDataVecs, (testDataVecs.shape[0], 1, testDataVecs.shape[1]))
-
-    # lstm_model = get_model()
-    model_lstm=load_weights("./models/model1/final_lstm.h5")  # provide the path of .h5 file
-    preds = lstm_model.predict(testDataVecs)
-    print("total pred is {}".format(preds))
-    # preds is the predicted value, its supposed to be 9 but it gives 6.9(~7).
-
-    # print("Inside ViewScore : ", filled_form_data)
-    # if q1ff == "NO":
-    #     result += 1
-    # # insert autograder code here
-    # # predff = 3.78
-    # predff = round(preds, 0)
-    # result += predff
-    # sf = filled_form_data['fname']+" "+filled_form_data['lname']+" 's answer for question 1 is "+filled_form_data['q1'] + \
-    #     " . Answer for question 2 is " + \
-    #     filled_form_data['q2'] + \
-    #     " Email ID of the user is - "+filled_form_data['email']
-    # sf = sf+"You scored = "+str(result)
-    # return render_template('string.html', s=sf)
-
-
+    return render_template('string.html', s=sf)
 
 
 if __name__ == "__main__":
